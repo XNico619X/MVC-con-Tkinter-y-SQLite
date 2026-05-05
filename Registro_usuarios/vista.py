@@ -33,12 +33,12 @@ class VistaRegistroUsuarios:
         # tabla para mostrar usuarios registrados
         frame_tabla = ttk.Frame(self.root, padding="20")
         frame_tabla.grid(row=1, column=0, sticky=(tk.W, tk.E, tk.N, tk.S))
-        frame_tabla.pack()
         self.tabla_usuarios = ttk.Treeview(frame_tabla, columns=(
             "ID", "Nombre", "Email"), show="headings")
         self.tabla_usuarios.heading("ID", text="ID")
         self.tabla_usuarios.heading("Nombre", text="Nombre")
         self.tabla_usuarios.heading("Email", text="Email")
+        self.tabla_usuarios.pack(fill=tk.BOTH, expand=True)
 
         # Boton eliminar usuario
         self.btn_eliminar = ttk.Button(frame_tabla, text="Eliminar Usuario")
